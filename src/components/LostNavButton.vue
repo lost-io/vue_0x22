@@ -9,11 +9,8 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
     name: "LostNavButton",
-    setup() {
-        
-    },
     props: {
-        NavText: Text
+        NavText: String
     }
 })
 </script>
