@@ -1,32 +1,57 @@
 <template>
   <LostHeader/>
-  <footer class="grid-container"> 
-  <div class="gs-1-6">
-    <p>
-      Hello World
-    </p>
-  </div>
-  <div class="gs-6-12">
-    <p>
-      Foo
-     </p>
-    <p>
-     bar
-    </p>
-    </div>
-  </footer>
+  <LostFooter :credits="'lost-io'" :socials="socials" :contactInfo="'lost-io@email'"/>
 </template>
 
 <script lang="ts">
+interface SocialsData {
+  id: number
+  link: string
+  name: string
+}
 import { defineComponent } from 'vue';
 import HelloWorld from './components/HelloWorld.vue';
 import LostHeader from './components/LostHeader.vue';
+import LostFooter from './components/LostFooter.vue';
 export default defineComponent({
   name: 'App',
   components: {
-    LostHeader
-  }
+    LostHeader,
+    LostFooter
+  },
+  data() {
+    return {
+      socials: {}
+    }
+  },
+  created() {
+    const data = [
+    {
+      id: 1,
+      link: '#',
+      name: 'linked-in'
+    },
+    {
+      id: 2,
+      link: "#",
+      name: "github"
+    },
+    {
+      id: 3,
+      link: "#",
+      name: "twitter"
+    },
+    {
+      id: 4,
+      link: "#",
+      name: "facebook"
+    }
+  ]
+  this.socials = data 
+  } 
+
 });
+
 </script>
 
 <style>
@@ -37,6 +62,9 @@ export default defineComponent({
   --tertiary-color: #C5C6C7;
   --bg-color: #0B0C10;
   --alt-bg: #1F2833;
+}
+body{
+  margin: 0;
 }
 
 #app {
@@ -53,26 +81,4 @@ body {
   flex-direction: column;
   background-color: var(--bg-color);
 }
-
-footer {
-  background:var(--alt-bg);
-  margin-top:auto;
-}
-
-.grid-container{
-  display: grid;
-  grid-template: repeat(12,1fr);
-}
-
-
-
-.gs-1-12{
-  grid-column: 1/6;
-}
-.gs-6-12{
-  grid-column: 6/12;
-}
-
-
-
 </style>

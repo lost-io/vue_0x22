@@ -1,7 +1,7 @@
 <template>
     <header>
-        <div>
-              <img alt="Vue logo" src="../assets/logo.png">
+        <div class="logo">
+              <img alt="Vue logo"  src="../assets/Placeholder_0101.png">
         </div>
             <nav>
                 <LostNavButton NavText="Option_01"/>
@@ -33,9 +33,16 @@ export default defineComponent({
     }
 
     nav {
+        padding: 0.2rem;
         display: grid;
         grid-gap: 0.1rem;
         color: var(--primary-color);
             grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
+    }
+    .logo{
+        max-height: 4em;
+    }
+    .logo img {
+        height: 100%;
     }
 </style>
