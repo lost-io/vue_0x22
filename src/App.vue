@@ -63,6 +63,9 @@ export default defineComponent({
   --bg-color: #0B0C10;
   --alt-bg: #1F2833;
 }
+body{
+  margin: 0;
+}
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

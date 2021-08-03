@@ -33,14 +33,14 @@ export default defineComponent({
     }
 
     nav {
-        padding: 1rem;
+        padding: 0.2rem;
         display: grid;
         grid-gap: 0.1rem;
         color: var(--primary-color);
             grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
     }
     .logo{
-        max-height: 5em;
+        max-height: 4em;
     }
     .logo img {
         height: 100%;
